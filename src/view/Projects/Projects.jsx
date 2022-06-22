@@ -1,7 +1,12 @@
-import React from "react"
+import React from "react";
+import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 
 const Projects = () => {
-    return <div>Muie si pe pagina asta Mihai</div>
-}
+  return (
+    <div>
+      <HamburgerMenu />
+    </div>
+  );
+};
 
 export default Projects;
