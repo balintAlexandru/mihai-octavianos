@@ -14,6 +14,7 @@ import logo from "../../assets/IntroPage/logo.png";
 
 const IntroPage = () => {
   const navigate = useNavigate();
+  
   // HOOKS
   const [volumeState, setVolumeState] = useState(true);
 

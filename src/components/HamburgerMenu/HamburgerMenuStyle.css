@@ -1,5 +1,6 @@
 .ham {
   cursor: pointer;
+  z-index: 99;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   -moz-user-select: none;

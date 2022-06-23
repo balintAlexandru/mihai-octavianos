@@ -38,7 +38,9 @@ export const IntroPageVideoControlContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-export const IntroPageVideoControlSoundWrapper = styled.div``;
+export const IntroPageVideoControlSoundWrapper = styled.div`
+  cursor: pointer;
+`;
 export const IntroPageVideoControlSkipButtonWrapper = styled.div`
   display: flex;
   align-items: center;
