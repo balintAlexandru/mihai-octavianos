@@ -4,17 +4,12 @@ import { useNavigate } from "react-router-dom";
 //STYLE
 import * as Styled from "./IntroPageStyle";
 
-// LIBRARIES
-// import VolumeUpIcon from "@mui/icons-material/VolumeUp";
-// import VolumeOffIcon from "@mui/icons-material/VolumeOff";
-// import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-
 // ASSETS
 import logo from "../../assets/IntroPage/logo.png";
 
 const IntroPage = () => {
   const navigate = useNavigate();
-  
+
   // HOOKS
   const [volumeState, setVolumeState] = useState(true);
 

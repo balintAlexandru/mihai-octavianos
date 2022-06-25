@@ -3,6 +3,9 @@ import React from "react";
 //STYLE
 import * as Styled from "./LayoutStyle";
 
+// ASSETS
+import logo from "../../assets/IntroPage/logo.png";
+
 // COMPONENTS
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 
@@ -10,15 +13,20 @@ import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 import { useSelector } from "react-redux";
 
 const Layout = () => {
-  const showMenu = useSelector((state) => state.menuLayout.value);
+  let showMenu = useSelector((state) => state.menuLayout.value);
 
   return (
-    <Styled.ProjectContainer>
+    <Styled.LayoutContainer>
+      <Styled.LayoutLogoContainer>
+        <Styled.LayoutLogoWrapper>
+          {!showMenu && <Styled.LayoutLogo src={logo} />}
+        </Styled.LayoutLogoWrapper>
+      </Styled.LayoutLogoContainer>
       <Styled.MenuWrapper>
         <HamburgerMenu />
       </Styled.MenuWrapper>
       {showMenu && <Styled.MenuLayoutStyle />}
-    </Styled.ProjectContainer>
+    </Styled.LayoutContainer>
   );
 };
 

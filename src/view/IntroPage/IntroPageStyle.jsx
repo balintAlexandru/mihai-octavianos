@@ -1,5 +1,5 @@
 // LIBRARIES
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import * as variables from "../../utils/Styles/variables";
 
 // LIBRARIES
@@ -22,6 +22,7 @@ export const IntroPageLogoContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: left;
+  animation: ${variables.fadeIn} 1s linear;
 `;
 export const IntroPageLogoWrapper = styled.div`
   width: 6rem;
@@ -37,6 +38,7 @@ export const IntroPageVideoControlContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  animation: ${variables.fadeIn} 1s linear;
 `;
 export const IntroPageVideoControlSoundWrapper = styled.div`
   cursor: pointer;

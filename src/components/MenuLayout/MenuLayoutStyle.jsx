@@ -1,5 +1,5 @@
 // LIBRARIES
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 // CONSTANTS
 import * as variables from "../../utils/Styles/variables";
@@ -38,9 +38,48 @@ export const MenuLayoutTextWrapper = styled.div`
   flex-direction: column;
   gap: 1.2rem;
 `;
-export const MenuLayoutText = styled.span`
-  font-size: 3rem;
-  cursor: pointer;
-  font-weight: ${variables.bold};
-  font-family: ${variables.poppins};
+export const MenuLayoutTextLineWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
 `;
+export const MenuLayoutTextLine = styled.div(
+  ({ style }) => css`
+    position: absolute;
+    height: ${style.value ? "0.1rem" : "0rem"};
+    margin-top: 0.5rem;
+    left: ${style.left};
+    width: ${style.lineWidth};
+    background-color: ${variables.blackPrimaryColor};
+    animation: ${drawTextLine(style.lineWidth)} 0.5s linear;
+  `
+);
+export const MenuLayoutText = styled.span(
+  ({ style }) => css`
+    font-size: ${style.value ? "4rem" : "3rem"};
+    color: ${variables.blackPrimaryColor};
+    cursor: pointer;
+    font-weight: ${style.value ? variables.semiBold : 500};
+    font-family: ${variables.poppins};
+  `
+);
+
+// social-media
+export const MenuLayoutSocialMediaWrapper = styled.div`
+  margin-top: 15rem;
+`;
+export const MenuLayoutSocialMedia = styled.a`
+  font-style: italic;
+  font-family: ${variables.poppins};
+  font-size: 1.5rem;
+  color: ${variables.blackPrimaryColor};
+  text-decoration: none;
+`;
+
+// animation
+const drawTextLine = (element) => {
+  return keyframes`
+      from { width: 0% }
+      to { width: ${element} }
+    `;
+};

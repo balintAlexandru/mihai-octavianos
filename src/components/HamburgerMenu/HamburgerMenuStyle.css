@@ -1,7 +1,6 @@
-
-.hamburger-menu-animation{
-  opacity:0; 
-  animation:fadeIn 1.2s ease-in forwards;
+.hamburger-menu-animation {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in forwards;
 }
 .ham {
   cursor: pointer;
@@ -19,13 +18,22 @@
 .hamRotate180.active {
   transform: rotate(180deg);
 }
-.line {
+.lineDefault {
   fill: none;
   transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
-  stroke: #000000;
+  stroke: #27282d;
   stroke-width: 5.5;
   stroke-linecap: round;
 }
+
+.lineActive {
+  fill: none;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+  stroke: #fefefe;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
 .ham1 .top {
   stroke-dasharray: 40 139;
 }
@@ -40,6 +48,10 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
