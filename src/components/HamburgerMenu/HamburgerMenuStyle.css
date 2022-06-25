@@ -1,3 +1,8 @@
+
+.hamburger-menu-animation{
+  opacity:0; 
+  animation:fadeIn 1.2s ease-in forwards;
+}
 .ham {
   cursor: pointer;
   z-index: 99;
@@ -16,7 +21,7 @@
 }
 .line {
   fill: none;
-  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
   stroke: #000000;
   stroke-width: 5.5;
   stroke-linecap: round;
@@ -32,4 +37,9 @@
 }
 .ham1.active .bottom {
   stroke-dashoffset: -138px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

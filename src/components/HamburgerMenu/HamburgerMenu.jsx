@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+// STYLE
 import "./HamburgerMenuStyle.css";
+
+// REDUX
 import { useDispatch } from "react-redux";
 import { menuLayoutState } from "../../slices/Slice";
+import { useSelector } from "react-redux";
 
 const HamburgerMenu = () => {
-  const [isActive, setActive] = useState(false);
   const dispatch = useDispatch();
-
+  const MenuState = useSelector((state) => state.menuLayout.value);
   return (
-    <div onClick={() => dispatch(menuLayoutState())}>
+    <div
+      className={MenuState ? "hamburger-menu-container" : "hamburger-menu-animation" }
+      onClick={() => dispatch(menuLayoutState())}>
       <svg
         className={
-          isActive ? "ham hamRotate ham1 active" : "ham hamRotate ham1"
+          MenuState? "ham hamRotate ham1 active" : "ham hamRotate ham1"
         }
         viewBox="0 0 100 100"
         width="55"
-        onClick={() => {
-          setActive(!isActive);
-        }}
       >
         <path
           className="line top"

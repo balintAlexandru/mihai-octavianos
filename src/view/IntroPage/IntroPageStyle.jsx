@@ -49,6 +49,7 @@ export const IntroPageVideoControlSkipButtonWrapper = styled.div`
 export const IntroPageVideoControlSkipButtonText = styled.span`
   color: ${variables.whitePrimaryColor};
   font-size: 1.6rem;
+  font-family: ${variables.poppins};
 `;
 
 // icons
