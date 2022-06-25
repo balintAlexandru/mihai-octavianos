@@ -10,12 +10,11 @@ import * as Styled from "./MenuLayoutStyle";
 
 // CONSTANTS
 import { MENU_MODEL } from "../../constants/constants";
+import { currentPath } from "../../helpers/globalFunctions";
 
 const MenuLayout = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  
 
   // HANDLE CHANGE
   const menuLayoutFunctionality = (element) => {
@@ -32,11 +31,7 @@ const MenuLayout = () => {
             return (
               <Styled.MenuLayoutTextLineWrapper key={index}>
                 <Styled.MenuLayoutText
-                  style={
-                    window?.location?.pathname === element.path
-                      ? element.style
-                      : {}
-                  }
+                  style={currentPath() === element.path ? element.style : {}}
                   onClick={() => menuLayoutFunctionality(element)}
                 >
                   {element.name}

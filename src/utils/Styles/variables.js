@@ -25,7 +25,6 @@ export const drawLine = keyframes`
   to { width: 100%; }
 `;
 
-
 // device size
 // export const mobile = "599px";
 // export const tabletLow = "600px";

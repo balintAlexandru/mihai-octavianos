@@ -5,12 +5,16 @@ import MenuLayout from "../../components/MenuLayout/MenuLayout";
 // container
 export const LayoutContainer = styled.div`
   display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
 `;
 
 // wrapper
 export const MenuWrapper = styled.div`
   float: right;
   padding: 1rem;
+  z-index: 6;
 `;
 export const MenuLayoutStyle = styled(MenuLayout)``;
 
@@ -20,7 +24,7 @@ export const LayoutLogoContainer = styled.div`
   display: flex;
   justify-content: left;
   padding: 2rem;
-  z-index: -2;
+  z-index: 55;
 `;
 export const LayoutLogoWrapper = styled.div`
   width: 6rem;

@@ -1,21 +1,16 @@
-import React from "react";
-import Layout from "../Layout/Layout";
+import React, { useEffect } from "react";
 
-//STYLE
-import * as Styled from "./ProjectsStyle";
+// CONSTANTS
+import { changeBackgroundColor } from "../../helpers/globalFunctions";
 
-// COMPONENTS
-
-
-// REDUX
-
+// STYLE
+import * as variables from "../../utils/Styles/variables";
 
 const Projects = () => {
-  
-
-  return (
-   null
-  );
+  useEffect(() => {
+    changeBackgroundColor(variables.whitePrimaryColor);
+  }, []);
+  return <div></div>;
 };
 
 export default Projects;

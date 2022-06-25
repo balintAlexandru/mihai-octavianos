@@ -15,6 +15,8 @@ import { useSelector } from "react-redux";
 const Layout = () => {
   let showMenu = useSelector((state) => state.menuLayout.value);
 
+  // HANDLE FUNCTIONS
+
   return (
     <Styled.LayoutContainer>
       <Styled.LayoutLogoContainer>

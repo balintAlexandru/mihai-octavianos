@@ -11,7 +11,7 @@ export const MenuLayoutContainer = styled.div`
   background-color: ${variables.whitePrimaryColor};
   position: absolute;
   top: 0;
-  z-index: -1;
+  z-index: 2;
   padding: 2rem;
   display: flex;
   justify-content: center;
