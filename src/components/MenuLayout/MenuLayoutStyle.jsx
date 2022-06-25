@@ -1,5 +1,7 @@
 // LIBRARIES
-import styled, { css } from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// CONSTANTS
 import * as variables from "../../utils/Styles/variables";
 
 // container
@@ -15,6 +17,7 @@ export const MenuLayoutContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation: ${variables.fadeIn} 0.5s ease-in;
 `;
 
 // wrapper
@@ -25,6 +28,7 @@ export const MenuLayoutLine = styled.div`
   background-color: ${variables.blackPrimaryColor};
   height: 0.2rem;
   width: 100%;
+  animation: ${variables.drawLine} 0.5s linear;
 `;
 
 // text

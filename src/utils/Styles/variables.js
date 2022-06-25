@@ -1,3 +1,5 @@
+import styled, { keyframes } from "styled-components";
+
 // color scheme
 export const blackPrimaryColor = "#27282D";
 export const whitePrimaryColor = "#FEFEFE";
@@ -8,6 +10,15 @@ export const semiBold = 600;
 export const bold = 700;
 export const poppins = "Poppins, sans-serif";
 
+// animation
+export const fadeIn = keyframes`
+ from { opacity: 0; }
+ to { opacity: 1; }
+`;
+export const drawLine = keyframes`
+  from { width: 0%; }
+  to { width: 100%; }
+`;
 // device size
 // export const mobile = "599px";
 // export const tabletLow = "600px";
