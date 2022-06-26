@@ -11,23 +11,21 @@ import Layout from "./view/Layout/Layout";
 import { useDispatch } from "react-redux";
 import { GetProjectsData } from "./slices/projectsData";
 
+// FIREBASE
 import { db } from "./firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
 function App() {
   // LIBRARIES CONSTANTS
   const dispatch = useDispatch();
-
-  // CONSTANTS
   const projectsCollectionRef = collection(db, "projects");
-
+ 
   // HANDLE FUNCTIONS
   useEffect(() => {
     const getProjects = async () => {
       const data = await getDocs(projectsCollectionRef);
       dispatch(GetProjectsData(data.docs.map((doc) => ({ ...doc.data() }))));
     };
-
     getProjects();
     // eslint-disable-next-line
   }, []);
