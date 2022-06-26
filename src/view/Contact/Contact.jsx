@@ -15,6 +15,7 @@ import * as Styled from "./ContactStyle";
 // REDUX
 import { useSelector } from "react-redux";
 
+
 const Contact = () => {
   let showContent = useSelector((state) => state.menuLayout.value);
   useEffect(() => {

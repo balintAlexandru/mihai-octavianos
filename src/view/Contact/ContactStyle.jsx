@@ -57,7 +57,7 @@ export const ContactFormInput = styled.input`
   background-color: transparent;
   border: none;
   border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
-  border-radius:0px;
+  border-radius: 0px;
   font-size: 1.6rem;
   padding-left: 0.2rem;
   color: ${variables.whitePrimaryColor};
@@ -81,7 +81,7 @@ export const ContactFormTextArea = styled.textarea`
   border: none;
   border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
   ${variables.whitePrimaryColor};
-  border-radius:0px;
+  border-radius: 0px;
   font-size: 1.6rem;
   color: ${variables.whitePrimaryColor};
   &:focus {
