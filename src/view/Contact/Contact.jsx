@@ -15,12 +15,15 @@ import * as Styled from "./ContactStyle";
 // REDUX
 import { useSelector } from "react-redux";
 
-
 const Contact = () => {
+  // GENERAL CONSTANTS
   let showContent = useSelector((state) => state.menuLayout.value);
+
+  // HANDLE FUNCTIONS
   useEffect(() => {
     changeBackgroundColor(variables.blackPrimaryColor);
   }, []);
+
   return (
     <Styled.ContactContainer style={{ showContent }}>
       <Styled.ContactLine style={{ marginTop: "10rem" }} />

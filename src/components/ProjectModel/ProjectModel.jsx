@@ -6,10 +6,18 @@ import * as Styled from "./ProjectsModelStyle";
 // LIBRARIES
 import PropTypes from "prop-types";
 
+// REDUX
+import { useSelector } from "react-redux";
+
 const ProjectModel = (props) => {
-  const { image, name } = props;
+  // PROPS
+  const { image = "", name = "" } = props;
+
+  // CONSTANTS USING LIBRARIES
+  const firstAnimation = useSelector((state) => state.projectsData.skipValue);
+
   return (
-    <Styled.ProjectModelWrapper>
+    <Styled.ProjectModelWrapper style={{ firstAnimation }}>
       <Styled.ProjectModelImageWrapper>
         <Styled.ProjectModelImage src={image} alt={name} />
       </Styled.ProjectModelImageWrapper>

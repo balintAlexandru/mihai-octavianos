@@ -13,10 +13,11 @@ import { MENU_MODEL } from "../../constants/constants";
 import { currentPath } from "../../helpers/globalFunctions";
 
 const MenuLayout = () => {
+  //CONSTANTS USING LIBRARIES
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // HANDLE CHANGE
+  // HANDLE FUNCTIONS
   const menuLayoutFunctionality = (element) => {
     navigate(element.path);
     dispatch(menuLayoutState());

@@ -4,21 +4,28 @@ import React from "react";
 import "./HamburgerMenuStyle.css";
 
 // REDUX
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { menuLayoutState } from "../../slices/Slice";
-import { useSelector } from "react-redux";
+import { handleSkipButton } from "../../slices/projectsData";
 
 // CONSTANTS
 
 const HamburgerMenu = () => {
+  // CONSTANTS USING LIBRARIES
   const dispatch = useDispatch();
   const MenuState = useSelector((state) => state.menuLayout.value);
+
+  //HANDLE FUNCTIONS
+  const menuFunctionality = () => {
+    dispatch(menuLayoutState());
+    dispatch(handleSkipButton("menu"));
+  };
   return (
     <div
       className={
         MenuState ? "hamburger-menu-container" : "hamburger-menu-animation"
       }
-      onClick={() => dispatch(menuLayoutState())}
+      onClick={() => menuFunctionality()}
     >
       <svg
         className={

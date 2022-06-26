@@ -9,7 +9,7 @@ import Layout from "./view/Layout/Layout";
 
 // REDUX
 import { useDispatch } from "react-redux";
-import { GetProjectsData } from "./slices/projectsData";
+import { GetProjectsData, handleSkipButton } from "./slices/projectsData";
 
 // FIREBASE
 import { db } from "./firebase-config";
@@ -19,7 +19,7 @@ function App() {
   // LIBRARIES CONSTANTS
   const dispatch = useDispatch();
   const projectsCollectionRef = collection(db, "projects");
- 
+
   // HANDLE FUNCTIONS
   useEffect(() => {
     const getProjects = async () => {
@@ -27,6 +27,7 @@ function App() {
       dispatch(GetProjectsData(data.docs.map((doc) => ({ ...doc.data() }))));
     };
     getProjects();
+    dispatch(handleSkipButton("project"));
     // eslint-disable-next-line
   }, []);
 

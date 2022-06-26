@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: [],
+  skipValue: false,
 };
 
 export const GetProjects = createSlice({
@@ -12,10 +13,15 @@ export const GetProjects = createSlice({
     GetProjectsData: (state, action) => {
       state.value = action.payload.reverse();
     },
+    handleSkipButton: (state, action) => {
+      action.payload === "project"
+        ? (state.skipValue = true)
+        : (state.skipValue = false);
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { GetProjectsData } = GetProjects.actions;
+export const { GetProjectsData, handleSkipButton } = GetProjects.actions;
 
 export default GetProjects.reducer;

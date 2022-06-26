@@ -16,6 +16,16 @@ export const fadeIn = keyframes`
  from { opacity: 0; }
  to { opacity: 1; }
 `;
+export const fadeInProject = keyframes`
+ from {
+   opacity: 0;
+   visibility: hidden;
+ }
+ to { 
+   opacity: 1;
+   visibility: visible;
+ }
+`;
 export const fadeOut = keyframes`
  from { opacity: 1; }
  to { opacity: 0; }

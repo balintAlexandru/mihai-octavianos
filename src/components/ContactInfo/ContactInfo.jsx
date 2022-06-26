@@ -6,8 +6,8 @@ import * as Styled from "./ContactInfoStyle";
 // LIBRARIES
 import PropTypes from "prop-types";
 
-const ContactInfo = (element = {}, index = 0) => {
-  console.log(element, index);
+const ContactInfo = (props) => {
+  const { element = {}, index = 0 } = props;
   return (
     <Styled.ContactTextWrapper key={index} style={element}>
       <Styled.ContactText>{element.value}</Styled.ContactText>
@@ -15,6 +15,9 @@ const ContactInfo = (element = {}, index = 0) => {
   );
 };
 
-ContactInfo.propTypes = {};
+ContactInfo.propTypes = {
+  index: PropTypes.number,
+  element: PropTypes.shape,
+};
 
 export default ContactInfo;
