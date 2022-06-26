@@ -7,7 +7,11 @@ import Archive from "./view/Archive/Archive";
 import Contact from "./view/Contact/Contact";
 import Layout from "./view/Layout/Layout";
 
+
+
+
 function App() {
+ 
   return (
     <BrowserRouter>
       <Routes>
