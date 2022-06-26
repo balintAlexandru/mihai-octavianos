@@ -54,7 +54,7 @@ const Contact = () => {
           LET 'S TALK
         </Styled.ContactButton>
       </Styled.ContactButtonWrapper>
-      <Styled.ContactLine style={{ marginTop: "4rem" }} />
+      <Styled.ContactLine style={{ marginTop: "5rem" }} />
       <Styled.ContactInfoContainer>
         {CONTACT_INFO_MODEL?.map((element, index) => (
           <Styled.ContactInfoWrapper key={index}>

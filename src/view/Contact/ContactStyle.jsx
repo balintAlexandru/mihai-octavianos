@@ -57,6 +57,7 @@ export const ContactFormInput = styled.input`
   background-color: transparent;
   border: none;
   border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
+  border-radius:0px;
   font-size: 1.6rem;
   padding-left: 0.2rem;
   color: ${variables.whitePrimaryColor};
@@ -80,6 +81,7 @@ export const ContactFormTextArea = styled.textarea`
   border: none;
   border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
   ${variables.whitePrimaryColor};
+  border-radius:0px;
   font-size: 1.6rem;
   color: ${variables.whitePrimaryColor};
   &:focus {
@@ -112,7 +114,7 @@ export const ContactButton = styled.div`
 
 // contact information
 export const ContactInfoContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 3rem;
   animation: ${variables.fadeIn} 0.6s ease-in;
   padding-bottom: 6rem;
 `;
