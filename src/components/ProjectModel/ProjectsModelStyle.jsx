@@ -7,8 +7,8 @@ export const ProjectModelWrapper = styled.div(
     ${console.log(style.firstAnimation)}
     padding: 1rem;
     visibility: hidden;
-    animation: ${variables.fadeInProject} 0.5s ease-in forwards;
-    animation-delay: ${style.firstAnimation ? "0.3s" : "0s"};
+    animation: ${variables.fadeInProject} ${style.firstAnimation ? "0.6s" : "0.7s"} ease-in forwards;
+    animation-delay: ${style.firstAnimation ? "0.3s" : "0.2s"};
   `
 );
 export const ProjectModelImageWrapper = styled.div`
