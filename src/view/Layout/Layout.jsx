@@ -16,7 +16,9 @@ const Layout = () => {
   let showMenu = useSelector((state) => state.menuLayout.value);
 
   // HANDLE FUNCTIONS
+  // const fistDisplayElement = () => [
 
+  // ]
   return (
     <Styled.LayoutContainer>
       <Styled.LayoutLogoContainer>
@@ -27,7 +29,7 @@ const Layout = () => {
       <Styled.MenuWrapper>
         <HamburgerMenu />
       </Styled.MenuWrapper>
-      {showMenu && <Styled.MenuLayoutStyle />}
+      <Styled.MenuLayoutStyle value={showMenu} />
     </Styled.LayoutContainer>
   );
 };

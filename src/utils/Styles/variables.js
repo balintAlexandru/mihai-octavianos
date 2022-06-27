@@ -28,13 +28,30 @@ export const fadeInProject = keyframes`
 `;
 export const fadeOut = keyframes`
  from { opacity: 1; }
- to { opacity: 0; }
+ to { opacity: 0;}
 `;
 export const drawLine = keyframes`
   from { width: 0%; }
   to { width: 100%; }
 `;
+export const fadeOutMenuLayout = keyframes`
+  0% { opacity: 1;
 
+}
+100% {
+  opacity: 0;
+  z-index:-5
+}
+`;
+export const fadeInMenuLayout = keyframes`
+   0% { opacity: 0;
+
+}
+99% {
+  opacity: 1;
+  z-index:2;
+}
+`;
 // device size
 // export const mobile = "599px";
 // export const tabletLow = "600px";

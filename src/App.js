@@ -9,7 +9,7 @@ import Layout from "./view/Layout/Layout";
 
 // REDUX
 import { useDispatch } from "react-redux";
-import { GetProjectsData, handleSkipButton } from "./slices/projectsData";
+import { GetProjectsData } from "./slices/projectsData";
 
 // FIREBASE
 import { db } from "./firebase-config";
@@ -27,7 +27,6 @@ function App() {
       dispatch(GetProjectsData(data.docs.map((doc) => ({ ...doc.data() }))));
     };
     getProjects();
-    dispatch(handleSkipButton("project"));
     // eslint-disable-next-line
   }, []);
 

@@ -1,24 +1,28 @@
 // LIBRARIES
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 
 // CONSTANTS
 import * as variables from "../../utils/Styles/variables";
 
 // container
-export const MenuLayoutContainer = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-color: ${variables.whitePrimaryColor};
-  position: absolute;
-  top: 0;
-  z-index: 2;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  animation: ${variables.fadeIn} 0.5s ease-in;
-`;
+export const MenuLayoutContainer = styled.div(
+  ({ style }) => css`
+    width: 100%;
+    height: 100vh;
+    background-color: ${variables.whitePrimaryColor};
+    position: absolute;
+    top: 0;
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: ${style.value ? "2" : "-1"};
+    opacity: ${style.value ? "1" : "0"};
+    transition: z-index ${style.value ? "0s" : "0.4s"} ease-in-out,
+      opacity ${style.value ? "0.4s" : "0.4s"} ease-in-out;
+  `
+);
 
 // wrapper
 export const MenuLayoutWrapper = styled.div`
@@ -37,30 +41,54 @@ export const MenuLayoutTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  margin-left: 1rem;
 `;
 export const MenuLayoutTextLineWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
 `;
+export const MenuLayoutTextLineDimension = styled.div`
+  height: 100%;
+  position: relative;
+  margin-top: 1rem;
+`;
 export const MenuLayoutTextLine = styled.div(
   ({ style }) => css`
     position: absolute;
-    height: ${style.value ? "0.1rem" : "0rem"};
+    height: 1.9rem;
+    width: ${style.value ? "110%" : "0.2rem"};
+    background-color: ${variables.blackPrimaryColor};
+    bottom: ${style.value ? "1%" : "20%"};
+    left: -6%;
+    z-index: -1;
+    transition: width ${style.value ? "0.4s" : "0s"} ease-in;
+
+    /* height: ${style.value ? "0.1rem" : "0rem"};
     margin-top: 0.5rem;
     left: ${style.left};
     width: ${style.lineWidth};
-    background-color: ${variables.blackPrimaryColor};
-    animation: ${drawTextLine(style.lineWidth)} 0.5s linear;
+  
+     */
   `
 );
+
 export const MenuLayoutText = styled.span(
   ({ style }) => css`
     font-size: ${style.value ? "4rem" : "3rem"};
     color: ${variables.blackPrimaryColor};
+
     cursor: pointer;
     font-weight: ${style.value ? variables.semiBold : 500};
     font-family: ${variables.poppins};
+    /* transform: scale(1, 1.3); */
+    background: linear-gradient(
+      to bottom,
+      ${variables.blackPrimaryColor} ${style.value ? "60%" : "100%"},
+      #eff3f8 0%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   `
 );
 
@@ -75,11 +103,3 @@ export const MenuLayoutSocialMedia = styled.a`
   color: ${variables.blackPrimaryColor};
   text-decoration: none;
 `;
-
-// animation
-const drawTextLine = (element) => {
-  return keyframes`
-      from { width: 0% }
-      to { width: ${element} }
-    `;
-};

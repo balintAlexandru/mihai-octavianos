@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // STYLE
 import "./HamburgerMenuStyle.css";
@@ -6,8 +6,7 @@ import "./HamburgerMenuStyle.css";
 // REDUX
 import { useDispatch, useSelector } from "react-redux";
 import { menuLayoutState } from "../../slices/Slice";
-import { handleSkipButton } from "../../slices/projectsData";
-
+import { disableScroll, enableScroll } from "../../helpers/globalFunctions";
 // CONSTANTS
 
 const HamburgerMenu = () => {
@@ -15,10 +14,18 @@ const HamburgerMenu = () => {
   const dispatch = useDispatch();
   const MenuState = useSelector((state) => state.menuLayout.value);
 
+  // HOOKS CONSTANTS
+  const [enable, setEnable] = useState(false);
   //HANDLE FUNCTIONS
   const menuFunctionality = () => {
     dispatch(menuLayoutState());
-    dispatch(handleSkipButton("menu"));
+    if (enable) {
+      enableScroll();
+      setEnable(!enable);
+    } else {
+      disableScroll();
+      setEnable(!enable);
+    }
   };
   return (
     <div

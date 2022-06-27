@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 
 // CONSTANTS
-import { changeBackgroundColor } from "../../helpers/globalFunctions";
+import {
+  changeBackgroundColor,
+  enableScroll,
+} from "../../helpers/globalFunctions";
 
 // STYLE
 import * as variables from "../../utils/Styles/variables";
@@ -20,6 +23,7 @@ const Projects = () => {
   // HANDLE FUNCTIONS
   useEffect(() => {
     changeBackgroundColor(variables.whitePrimaryColor);
+    enableScroll();
   }, []);
 
   return (

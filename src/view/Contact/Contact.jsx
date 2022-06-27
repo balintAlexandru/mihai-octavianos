@@ -7,7 +7,10 @@ import {
   CONTACT_INFO_MODEL,
 } from "../../constants/constants";
 import * as variables from "../../utils/Styles/variables";
-import { changeBackgroundColor } from "../../helpers/globalFunctions";
+import {
+  changeBackgroundColor,
+  enableScroll,
+} from "../../helpers/globalFunctions";
 
 //STYLE
 import * as Styled from "./ContactStyle";
@@ -22,6 +25,7 @@ const Contact = () => {
   // HANDLE FUNCTIONS
   useEffect(() => {
     changeBackgroundColor(variables.blackPrimaryColor);
+    enableScroll();
   }, []);
 
   return (

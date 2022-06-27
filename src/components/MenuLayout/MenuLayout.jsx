@@ -12,7 +12,8 @@ import * as Styled from "./MenuLayoutStyle";
 import { MENU_MODEL } from "../../constants/constants";
 import { currentPath } from "../../helpers/globalFunctions";
 
-const MenuLayout = () => {
+const MenuLayout = (props) => {
+  const { value } = props;
   //CONSTANTS USING LIBRARIES
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -20,30 +21,34 @@ const MenuLayout = () => {
   // HANDLE FUNCTIONS
   const menuLayoutFunctionality = (element) => {
     navigate(element.path);
-    dispatch(menuLayoutState());
+    setTimeout(() => {
+      dispatch(menuLayoutState());
+    }, 400);
   };
 
   return (
-    <Styled.MenuLayoutContainer>
+    <Styled.MenuLayoutContainer style={{ value }}>
       <Styled.MenuLayoutWrapper>
         <Styled.MenuLayoutLine />
         <Styled.MenuLayoutTextWrapper>
           {MENU_MODEL.map((element, index) => {
             return (
               <Styled.MenuLayoutTextLineWrapper key={index}>
-                <Styled.MenuLayoutText
-                  style={currentPath() === element.path ? element.style : {}}
-                  onClick={() => menuLayoutFunctionality(element)}
-                >
-                  {element.name}
-                </Styled.MenuLayoutText>
-                <Styled.MenuLayoutTextLine
-                  style={
-                    window?.location?.pathname === element.path
-                      ? element.style
-                      : {}
-                  }
-                />
+                <Styled.MenuLayoutTextLineDimension>
+                  <Styled.MenuLayoutText
+                    style={currentPath() === element.path ? element.style : {}}
+                    onClick={() => menuLayoutFunctionality(element)}
+                  >
+                    {element.name}
+                  </Styled.MenuLayoutText>
+                  <Styled.MenuLayoutTextLine
+                    style={
+                      window?.location?.pathname === element.path
+                        ? element.style
+                        : {}
+                    }
+                  />
+                </Styled.MenuLayoutTextLineDimension>
               </Styled.MenuLayoutTextLineWrapper>
             );
           })}
