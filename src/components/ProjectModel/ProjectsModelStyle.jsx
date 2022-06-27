@@ -4,7 +4,6 @@ import * as variables from "../../utils/Styles/variables";
 
 export const ProjectModelWrapper = styled.div(
   ({ style }) => css`
-    ${console.log(style.firstAnimation)}
     padding: 1rem;
     visibility: hidden;
     animation: ${variables.fadeInProject} ${style.firstAnimation ? "0.6s" : "0.7s"} ease-in forwards;
