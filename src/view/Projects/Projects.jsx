@@ -27,7 +27,7 @@ const Projects = () => {
       {PROJECTS_DATA?.length > 0 && (
         <Styled.ProjectsContainer>
           {PROJECTS_DATA?.map((data, index) => (
-            <ProjectModel key={index} image={data.IMAGE} name={data.NAME} />
+            <ProjectModel key={index} image={data?.IMAGE} name={data?.NAME} />
           ))}
         </Styled.ProjectsContainer>
       )}
