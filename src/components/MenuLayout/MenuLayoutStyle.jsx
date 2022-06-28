@@ -59,11 +59,11 @@ export const MenuLayoutTextLineDimension = styled.div`
 export const MenuLayoutTextLine = styled.div(
   ({ style }) => css`
     position: absolute;
-    height: 1.9rem;
-    width: ${style.value ? "110%" : "0.2rem"};
+    height: ${style.value ? "1.9rem" : "1.2rem"};
+    width: ${style.value ? "110%" : "0.3rem"};
     background-color: ${variables.blackPrimaryColor};
     bottom: ${style.value ? "1%" : "20%"};
-    left: -6%;
+    left: -8%;
     z-index: -1;
     transition: width ${style.value ? "0.4s" : "0s"} ease-in;
   `
