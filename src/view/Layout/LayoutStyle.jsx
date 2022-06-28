@@ -34,5 +34,5 @@ export const LayoutLogo = styled.img`
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: ${variables.fadeIn} 0.5s ease-in forwards;
+  animation: ${variables.fadeIn} 0.4s ease-in forwards;
 `;

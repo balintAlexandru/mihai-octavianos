@@ -18,7 +18,6 @@ const HamburgerMenu = () => {
   const [enable, setEnable] = useState(false);
   //HANDLE FUNCTIONS
   const menuFunctionality = () => {
-    dispatch(menuLayoutState());
     if (enable) {
       enableScroll();
       setEnable(!enable);
@@ -26,6 +25,7 @@ const HamburgerMenu = () => {
       disableScroll();
       setEnable(!enable);
     }
+    dispatch(menuLayoutState());
   };
   return (
     <div

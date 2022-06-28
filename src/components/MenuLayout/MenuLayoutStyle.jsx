@@ -1,5 +1,6 @@
 // LIBRARIES
 import styled, { css } from "styled-components";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 // CONSTANTS
 import * as variables from "../../utils/Styles/variables";
@@ -28,12 +29,14 @@ export const MenuLayoutContainer = styled.div(
 export const MenuLayoutWrapper = styled.div`
   width: 100%;
 `;
-export const MenuLayoutLine = styled.div`
-  background-color: ${variables.blackPrimaryColor};
-  height: 0.2rem;
-  width: 100%;
-  animation: ${variables.drawLine} 0.5s linear;
-`;
+export const MenuLayoutLine = styled.div(
+  ({ style }) => css`
+    background-color: ${variables.blackPrimaryColor};
+    height: 0.2rem;
+    width: ${style.value ? "100%" : "0%"};
+    transition: width 0.4s ease-in-out;
+  `
+);
 
 // text
 export const MenuLayoutTextWrapper = styled.div`
@@ -63,21 +66,14 @@ export const MenuLayoutTextLine = styled.div(
     left: -6%;
     z-index: -1;
     transition: width ${style.value ? "0.4s" : "0s"} ease-in;
-
-    /* height: ${style.value ? "0.1rem" : "0rem"};
-    margin-top: 0.5rem;
-    left: ${style.left};
-    width: ${style.lineWidth};
-  
-     */
   `
 );
 
 export const MenuLayoutText = styled.span(
   ({ style }) => css`
     font-size: ${style.value ? "4rem" : "3rem"};
+    transition: font-size 0.1s ease-in-out;
     color: ${variables.blackPrimaryColor};
-
     cursor: pointer;
     font-weight: ${style.value ? variables.semiBold : 500};
     font-family: ${variables.poppins};
@@ -95,6 +91,8 @@ export const MenuLayoutText = styled.span(
 // social-media
 export const MenuLayoutSocialMediaWrapper = styled.div`
   margin-top: 15rem;
+  display: flex;
+  align-items: center;
 `;
 export const MenuLayoutSocialMedia = styled.a`
   font-style: italic;
@@ -102,4 +100,9 @@ export const MenuLayoutSocialMedia = styled.a`
   font-size: 1.5rem;
   color: ${variables.blackPrimaryColor};
   text-decoration: none;
+  margin-left: 0.5rem;
+`;
+export const MenuInstagramIcon = styled(InstagramIcon)`
+  font-size: 2rem !important;
+  color: ${variables.blackPrimaryColor};
 `;

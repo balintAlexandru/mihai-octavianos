@@ -23,7 +23,7 @@ export const ContactLine = styled.div(
     opacity: 60%;
     background-color: ${variables.whitePrimaryColor};
     margin-top: ${style.marginTop};
-    animation: ${variables.drawLine} 0.4s ease-in;
+    animation: ${variables.drawLine} 1.2s ease-in;
   `
 );
 
@@ -39,7 +39,7 @@ export const ContactText = styled.span`
   font-size: 3rem;
   text-align: left;
   font-family: ${variables.poppins};
-  animation: ${variables.fadeIn} 0.4s ease-in;
+  animation: ${variables.fadeIn} 1.2s ease-in;
   font-weight: 600;
 `;
 
@@ -49,7 +49,7 @@ export const ContactFormWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   margin-top: 0.5rem;
-  animation: ${variables.fadeIn} 0.4s ease-in;
+  animation: ${variables.fadeIn} 1.2s ease-in;
 `;
 export const ContactFormInput = styled.input`
   height: 4rem;
@@ -109,13 +109,13 @@ export const ContactButton = styled.div`
   align-items: center;
   justify-content: center;
   font-family: ${variables.poppins};
-  animation: ${variables.fadeIn} 0.4s ease-in;
+  animation: ${variables.fadeIn} 1.2s ease-in;
 `;
 
 // contact information
 export const ContactInfoContainer = styled.div`
   margin-top: 3rem;
-  animation: ${variables.fadeIn} 0.4s ease-in;
+  animation: ${variables.fadeIn} 1.2s ease-in;
   padding-bottom: 6rem;
 `;
 export const ContactInfoWrapper = styled.div`

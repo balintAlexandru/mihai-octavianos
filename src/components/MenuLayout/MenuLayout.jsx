@@ -23,13 +23,13 @@ const MenuLayout = (props) => {
     navigate(element.path);
     setTimeout(() => {
       dispatch(menuLayoutState());
-    }, 400);
+    }, 500);
   };
 
   return (
     <Styled.MenuLayoutContainer style={{ value }}>
       <Styled.MenuLayoutWrapper>
-        <Styled.MenuLayoutLine />
+        <Styled.MenuLayoutLine style={{ value }} />
         <Styled.MenuLayoutTextWrapper>
           {MENU_MODEL.map((element, index) => {
             return (
@@ -54,6 +54,7 @@ const MenuLayout = (props) => {
           })}
         </Styled.MenuLayoutTextWrapper>
         <Styled.MenuLayoutSocialMediaWrapper>
+          <Styled.MenuInstagramIcon />
           <Styled.MenuLayoutSocialMedia
             href="https://www.instagram.com/mihaioctavianos/"
             target="_blank"
