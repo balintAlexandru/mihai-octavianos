@@ -15,6 +15,7 @@ export const IntroPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: -webkit-fill-available;
 `;
 
 // logo

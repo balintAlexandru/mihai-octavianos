@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 // CONSTANTS
 import {
@@ -22,6 +22,8 @@ const Contact = () => {
   // GENERAL CONSTANTS
   let showContent = useSelector((state) => state.menuLayout.value);
 
+  // CONSTANTS USING HOOKS
+
   // HANDLE FUNCTIONS
   useEffect(() => {
     changeBackgroundColor(variables.blackPrimaryColor);
@@ -37,25 +39,9 @@ const Contact = () => {
         </Styled.ContactTextWrapper>
       ))}
       <Styled.ContactFormWrapper>
-        {CONTACT_FORM_MODEL?.map((element, index) => {
-          if (element.type === "input") {
-            return (
-              <Styled.ContactFormInput
-                key={index}
-                placeholder={element.name}
-              ></Styled.ContactFormInput>
-            );
-          } else if (element.type === "textarea") {
-            return (
-              <Styled.ContactFormTextArea
-                key={index}
-                placeholder={element.name}
-              ></Styled.ContactFormTextArea>
-            );
-          } else {
-            return null;
-          }
-        })}
+        <Styled.ContactFormInputName placeholder={"Name"} />
+        <Styled.ContactFormInputEmail placeholder={"E-mail"} />
+        <Styled.ContactFormTextArea placeholder={"Your Message"} />
       </Styled.ContactFormWrapper>
       <Styled.ContactButtonWrapper>
         <Styled.ContactButton onClick={() => console.log("da")}>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 //STYLE
@@ -7,13 +7,9 @@ import * as Styled from "./IntroPageStyle";
 // ASSETS
 import logo from "../../assets/IntroPage/logo.png";
 
-// REDUX
-import { useDispatch } from "react-redux";
-
 const IntroPage = () => {
   // CONSTANTS USING LIBRARIES
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   // HOOKS
   const [volumeState, setVolumeState] = useState(true);

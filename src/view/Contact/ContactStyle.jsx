@@ -18,12 +18,12 @@ export const ContactContainer = styled.div(
 // top line
 export const ContactLine = styled.div(
   ({ style }) => css`
-    height: 0.2rem;
-    width: 100%;
+    height: 0.1rem;
+    width: 80%;
     opacity: 60%;
     background-color: ${variables.whitePrimaryColor};
     margin-top: ${style.marginTop};
-    animation: ${variables.drawLine} 1.2s ease-in;
+    animation: ${variables.drawLine} 1.6s ease-in;
   `
 );
 
@@ -51,29 +51,62 @@ export const ContactFormWrapper = styled.div`
   margin-top: 0.5rem;
   animation: ${variables.fadeIn} 1.2s ease-in;
 `;
-export const ContactFormInput = styled.input`
-  height: 4rem;
-  margin-top: 1.5rem;
-  background-color: transparent;
-  border: none;
-  border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
-  border-radius: 0px;
-  font-size: 1.6rem;
-  padding-left: 0.2rem;
-  color: ${variables.whitePrimaryColor};
-  &:focus {
-    outline: none;
-  }
-  ::placeholder {
-    color: white;
-    font-family: ${variables.poppins};
-    font-weight: ${variables.regular};
-    letter-spacing: 0.05rem;
-  }
-`;
+export const ContactFormInputName = styled.input(
+  ({ style }) => css`
+    height: 3rem;
+    margin-top: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
+    border-radius: 0px;
+    font-size: 1.6rem;
+    padding-left: 0.2rem;
+    color: ${variables.whitePrimaryColor};
+    &:focus {
+      outline: none;
+    }
+    &focus::placeholder {
+      color: transparent;
+    }
+    ::placeholder {
+      color: white;
+      font-family: ${variables.poppins};
+      font-weight: ${variables.regular};
+      letter-spacing: 0.05rem;
+    }
+    input:focus::placeholder {
+      color: transparent;
+    }
+  `
+);
+export const ContactFormInputEmail = styled.input(
+  ({ style }) => css`
+    height: 3rem;
+    margin-top: 1.5rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
+    border-radius: 0px;
+    font-size: 1.6rem;
+    padding-left: 0.2rem;
+    color: ${variables.whitePrimaryColor};
+    &:focus {
+      outline: none;
+    }
+    &focus::placeholder {
+      color: transparent;
+    }
+    ::placeholder {
+      color: #f0eaea;
+      font-family: ${variables.poppins};
+      font-weight: ${variables.regular};
+      letter-spacing: 0.05rem;
+    }
+  `
+);
 export const ContactFormTextArea = styled.textarea`
   height: 6rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   resize: none;
   background-color: transparent;
   padding-left: 0.2rem;
@@ -88,7 +121,7 @@ export const ContactFormTextArea = styled.textarea`
     outline: none;
   }
   ::placeholder {
-    color: white;
+    color: #f0eaea;
     font-family: ${variables.poppins};
     font-weight: ${variables.regular};
     letter-spacing: 0.05rem;
@@ -96,6 +129,7 @@ export const ContactFormTextArea = styled.textarea`
 `;
 export const ContactButtonWrapper = styled.div`
   margin-top: 2rem;
+  padding-bottom: 3rem;
 `;
 export const ContactButton = styled.div`
   cursor: pointer;

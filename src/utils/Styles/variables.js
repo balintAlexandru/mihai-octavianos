@@ -32,7 +32,7 @@ export const fadeOut = keyframes`
 `;
 export const drawLine = keyframes`
   from { width: 0%; }
-  to { width: 100%; }
+  to { width: 80%; }
 `;
 export const fadeOutMenuLayout = keyframes`
   0% { opacity: 1;
@@ -57,3 +57,7 @@ export const fadeInMenuLayout = keyframes`
 // export const tabletLow = "600px";
 // export const tabletHigh = "1279px";
 // export const desktop = "1280px";
+
+// Z-INDEX: 1 ====> MENU LAYOUT
+// Z-INDEX: 2 ====> MENU HAMBURGER
+// Z-INDEX: 0 ====> LOGO

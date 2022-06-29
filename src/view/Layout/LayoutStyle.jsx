@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import * as variables from "../../utils/Styles/variables";
-import MenuLayout from "../../components/MenuLayout/MenuLayout";
 
 // container
 export const LayoutContainer = styled.div`
@@ -14,9 +13,8 @@ export const LayoutContainer = styled.div`
 export const MenuWrapper = styled.div`
   float: right;
   padding: 1rem;
-  z-index: 6;
+  z-index: 2;
 `;
-export const MenuLayoutStyle = styled(MenuLayout)``;
 
 // logo
 export const LayoutLogoContainer = styled.div`
@@ -24,7 +22,6 @@ export const LayoutLogoContainer = styled.div`
   display: flex;
   justify-content: left;
   padding: 2rem;
-  z-index: 55;
 `;
 export const LayoutLogoWrapper = styled.div`
   width: 6rem;

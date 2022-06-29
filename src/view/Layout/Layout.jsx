@@ -8,6 +8,7 @@ import logo from "../../assets/IntroPage/logo.png";
 
 // COMPONENTS
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
+import MenuLayout from "../../components/MenuLayout/MenuLayout";
 
 // REDUX
 import { useSelector } from "react-redux";
@@ -27,7 +28,7 @@ const Layout = () => {
       <Styled.MenuWrapper>
         <HamburgerMenu />
       </Styled.MenuWrapper>
-      <Styled.MenuLayoutStyle value={showMenu} />
+      <MenuLayout value={showMenu} />
     </Styled.LayoutContainer>
   );
 };

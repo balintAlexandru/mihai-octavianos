@@ -43,7 +43,7 @@ function App() {
             </>
           }
         />
-        <Route
+        {/* <Route
           path="about-me"
           element={
             <>
@@ -60,7 +60,7 @@ function App() {
               <Layout />
             </>
           }
-        />
+        /> */}
         <Route
           path="contact"
           element={
