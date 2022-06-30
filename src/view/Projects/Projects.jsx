@@ -12,7 +12,6 @@ import * as Styled from "./ProjectsStyle";
 
 // COMPONENTS
 import ProjectModel from "../../components/ProjectModel/ProjectModel";
-import ProjectLayout from "../../components/ProjectLayout/ProjectLayout";
 
 // REDUX
 import { useSelector } from "react-redux";
@@ -29,18 +28,13 @@ const Projects = () => {
     changeBackgroundColor(variables.whitePrimaryColor);
     enableScroll();
   }, []);
+
   return (
     <>
-      {/* <ProjectLayout hideLayout={setProjectLayoutStyle} /> */}
       {PROJECTS_DATA?.length > 0 && (
-        <Styled.ProjectsContainer onClick={() => setProjectLayoutStyle(true)}>
+        <Styled.ProjectsContainer>
           {PROJECTS_DATA?.map((data, index) => (
-            <ProjectModel
-              key={index}
-              image={data?.IMAGE}
-              name={data?.NAME}
-              customStyle={projectLayoutStyle}
-            />
+            <ProjectModel key={index} id={index} image={data?.IMAGE} />
           ))}
         </Styled.ProjectsContainer>
       )}

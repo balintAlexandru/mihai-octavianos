@@ -8,6 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: grey;
+  background-color: black !important;
   overflow: hidden;
 }

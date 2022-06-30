@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   value: [],
+  blur:0,
 };
 
 export const GetProjects = createSlice({
@@ -12,10 +13,13 @@ export const GetProjects = createSlice({
     GetProjectsData: (state, action) => {
       state.value = action.payload.reverse();
     },
+    isBlur: (state, action) => {
+      state.blur = action.payload;
+    }
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { GetProjectsData } = GetProjects.actions;
+export const { GetProjectsData, isBlur } = GetProjects.actions;
 
 export default GetProjects.reducer;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 //STYLE
 import * as Styled from "./ProjectsModelStyle";
@@ -7,19 +7,21 @@ import * as Styled from "./ProjectsModelStyle";
 import PropTypes from "prop-types";
 
 // REDUX
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { isBlur } from "../../slices/projectsData";
 
 const ProjectModel = (props) => {
   // PROPS
-  const { image = "", name = "", customStyle = false } = props;
-
+  const { image = "", id = 0 } = props;
+  const dispatch = useDispatch();
   // CONSTANTS USING LIBRARIES
+  const blurImage = useSelector((state) => state.projectsData.blur);
 
   return (
     <>
-      <Styled.ProjectModelWrapper style={{ customStyle }}>
+      <Styled.ProjectModelWrapper>
         <Styled.ProjectModelImageWrapper>
-          <Styled.ProjectModelImage src={image} alt={name} />
+          <Styled.ProjectModelImage src={image} alt={"project-image"} />
         </Styled.ProjectModelImageWrapper>
       </Styled.ProjectModelWrapper>
     </>
@@ -28,8 +30,7 @@ const ProjectModel = (props) => {
 
 ProjectModel.propTypes = {
   image: PropTypes.string,
-  name: PropTypes.string,
-  customStyle: PropTypes.bool,
+  id: PropTypes.number,
 };
 
 export default ProjectModel;
