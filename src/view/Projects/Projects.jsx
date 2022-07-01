@@ -21,8 +21,7 @@ const Projects = () => {
   const PROJECTS_DATA = useSelector((state) => state.projectsData.value);
 
   // CONSTANTS USING HOOKS
-  const [projectLayoutStyle, setProjectLayoutStyle] = useState(false);
-
+  const [projectLayoutStyle, setProjectLayoutStyle] = useState(0);
   // HANDLE FUNCTIONS
   useEffect(() => {
     changeBackgroundColor(variables.whitePrimaryColor);
@@ -32,9 +31,14 @@ const Projects = () => {
   return (
     <>
       {PROJECTS_DATA?.length > 0 && (
-        <Styled.ProjectsContainer>
+        <Styled.ProjectsContainer style={{ projectLayoutStyle }}>
           {PROJECTS_DATA?.map((data, index) => (
-            <ProjectModel key={index} id={index} image={data?.IMAGE} />
+            <ProjectModel
+              key={index}
+              id={index}
+              image={data?.IMAGE}
+              layout={setProjectLayoutStyle}
+            />
           ))}
         </Styled.ProjectsContainer>
       )}
