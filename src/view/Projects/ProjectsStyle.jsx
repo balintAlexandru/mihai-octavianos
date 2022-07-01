@@ -14,5 +14,10 @@ export const ProjectsContainer = styled.div(
         }
       }
     }
+    @media (hover: hover) and (pointer: fine) {
+      a:hover {
+        filter: blur(${style ? "5px" : "0px"});
+      }
+    }
   `
 );

@@ -37,8 +37,8 @@ const ProjectModel = (props) => {
             src={image}
             alt={"project-image"}
             style={{ styleProps }}
-            onMouseLeave={() => layout(true)}
-            onMouseEnter={() => layout(false)}
+            onMouseLeave={() => layout(false)}
+            onMouseEnter={() => layout(true)}
           />
         </Styled.ProjectModelImageWrapper>
       </Styled.ProjectModelWrapper>
