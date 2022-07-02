@@ -52,11 +52,12 @@ export const fadeInMenuLayout = keyframes`
   z-index:2;
 }
 `;
+
 // device size
-// export const mobile = "599px";
-// export const tabletLow = "600px";
-// export const tabletHigh = "1279px";
-// export const desktop = "1280px";
+export const mobile = "599px";
+export const tabletLow = "600px";
+export const tabletHigh = "1279px";
+export const desktop = "1280px";
 
 // Z-INDEX: 1 ====> MENU LAYOUT
 // Z-INDEX: 2 ====> MENU HAMBURGER

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 //STYLE
 import * as Styled from "./ProjectsModelStyle";
@@ -17,7 +17,7 @@ const ProjectModel = (props) => {
   // CONSTANTS USING LIBRARIES
   const blurImage = useSelector((state) => state.projectsData.blur);
   const [value, setValue] = useState(0);
-  const [styleProps, setStyleProps] = useState(false);
+  const [styleProps, setStyleProps] = useState(true);
 
   // useEffect(() => {
   //   setValue(blurImage);
@@ -28,6 +28,12 @@ const ProjectModel = (props) => {
   // const test = (id) => {
   //   dispatch(isBlur(id));
   // };
+  const handleScroll = useCallback(() => {
+    layout(false);
+  }, [layout]);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
   return (
     <>
@@ -37,7 +43,7 @@ const ProjectModel = (props) => {
             src={image}
             alt={"project-image"}
             style={{ styleProps }}
-            onMouseLeave={() => layout(false)}
+            // onMouseLeave={() => layout(true)}
             onMouseEnter={() => layout(true)}
           />
         </Styled.ProjectModelImageWrapper>

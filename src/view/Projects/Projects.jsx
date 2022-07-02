@@ -27,7 +27,7 @@ const Projects = () => {
     changeBackgroundColor(variables.whitePrimaryColor);
     enableScroll();
   }, []);
-
+  console.log(projectLayoutStyle);
   return (
     <>
       {PROJECTS_DATA?.length > 0 && (

@@ -6,6 +6,7 @@ import AboutMe from "./view/AboutMe/AboutMe";
 import Archive from "./view/Archive/Archive";
 import Contact from "./view/Contact/Contact";
 import Layout from "./view/Layout/Layout";
+import ProjectPage from "./view/ProjectPage/ProjectPage";
 
 // REDUX
 import { useDispatch } from "react-redux";
@@ -43,7 +44,16 @@ function App() {
             </>
           }
         />
-        {/* <Route
+        <Route
+          path="project-:id"
+          element={
+            <>
+              <ProjectPage />
+              <Layout />
+            </>
+          }
+        />
+        <Route
           path="about-me"
           element={
             <>
@@ -52,7 +62,7 @@ function App() {
             </>
           }
         />
-        <Route
+        {/* <Route
           path="archive"
           element={
             <>
