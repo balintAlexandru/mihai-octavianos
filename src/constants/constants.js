@@ -36,16 +36,7 @@ export const MENU_MODEL = [
     },
   },
 ];
-export const CONTACT_TEXT_MODEL = [
-  {
-    value: "WANNA DISCUSS A NEW PROJECT?",
-    marginTop: "2rem",
-  },
-  {
-    value: "GET IN TOUCH",
-    marginTop: "7.5rem",
-  },
-];
+
 export const CONTACT_FORM_MODEL = [
   {
     name: "NAME",

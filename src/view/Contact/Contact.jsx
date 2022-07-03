@@ -33,33 +33,43 @@ const Contact = () => {
   return (
     <Styled.ContactContainer style={{ showContent }}>
       <Styled.ContactLine style={{ marginTop: "10rem" }} />
-      {CONTACT_TEXT_MODEL?.map((element, index) => (
-        <Styled.ContactTextWrapper key={index} style={element}>
-          <Styled.ContactText>{element.value}</Styled.ContactText>
-        </Styled.ContactTextWrapper>
-      ))}
-      <Styled.ContactFormWrapper>
-        <Styled.ContactFormInputName placeholder={"Name"} />
-        <Styled.ContactFormInputEmail placeholder={"E-mail"} />
-        <Styled.ContactFormTextArea placeholder={"Your Message"} />
-      </Styled.ContactFormWrapper>
-      <Styled.ContactButtonWrapper>
-        <Styled.ContactButton onClick={() => console.log("da")}>
-          LET 'S TALK
-        </Styled.ContactButton>
-      </Styled.ContactButtonWrapper>
+
+      <Styled.ContactIntroTextWrapper>
+        <Styled.ContactIntroText>
+          WANNA DISCUSS A NEW PROJECT?
+        </Styled.ContactIntroText>
+      </Styled.ContactIntroTextWrapper>
+
+      <Styled.ContactFormContainer>
+        <Styled.ContactFormWrapper>
+          <Styled.ContactTextWrapper>
+            <Styled.ContactText>GET IN TOUCH</Styled.ContactText>
+          </Styled.ContactTextWrapper>
+          <Styled.ContactFormInputName placeholder={"Name"} />
+          <Styled.ContactFormInputEmail placeholder={"E-mail"} />
+          <Styled.ContactFormTextArea placeholder={"Your Message"} />
+        </Styled.ContactFormWrapper>
+        <Styled.ContactButtonWrapper>
+          <Styled.ContactButton onClick={() => console.log("da")}>
+            LET 'S TALK
+          </Styled.ContactButton>
+        </Styled.ContactButtonWrapper>
+      </Styled.ContactFormContainer>
+
       <Styled.ContactLine style={{ marginTop: "5rem" }} />
       <Styled.ContactInfoContainer>
-        {CONTACT_INFO_MODEL?.map((element, index) => (
-          <Styled.ContactInfoWrapper key={index}>
-            <Styled.ContactInfoTitle style={{ element }}>
-              {element.title}
-            </Styled.ContactInfoTitle>
-            <Styled.ContactInfoLink href={element.link || ""} target="_blank">
-              {element.info}
-            </Styled.ContactInfoLink>
-          </Styled.ContactInfoWrapper>
-        ))}
+        <Styled.ContactInfoTextWrapper>
+          {CONTACT_INFO_MODEL?.map((element, index) => (
+            <Styled.ContactInfoWrapper key={index}>
+              <Styled.ContactInfoTitle style={{ element }}>
+                {element.title}
+              </Styled.ContactInfoTitle>
+              <Styled.ContactInfoLink href={element.link || ""} target="_blank">
+                {element.info}
+              </Styled.ContactInfoLink>
+            </Styled.ContactInfoWrapper>
+          ))}
+        </Styled.ContactInfoTextWrapper>
       </Styled.ContactInfoContainer>
       <Styled.ContactCopyrightsWrapper>
         <Styled.ContactCopyrights>

@@ -12,6 +12,9 @@ export const ContactContainer = styled.div(
     position: relative;
     padding: 2rem;
     visibility: ${style.showContent && "hidden"};
+    @media (min-width: ${variables.desktop}) {
+      height: 100vh;
+    }
   `
 );
 
@@ -28,10 +31,35 @@ export const ContactLine = styled.div(
 );
 
 //text
+export const ContactIntroTextWrapper = styled.div(
+  ({ style }) => css`
+    width: 90%;
+    margin-top: 2rem;
+    @media (min-width: ${variables.desktop}) {
+    }
+  `
+);
+export const ContactIntroText = styled.span`
+  color: ${variables.whitePrimaryColor};
+  font-size: 3rem;
+  text-align: left;
+  font-family: ${variables.poppins};
+  animation: ${variables.fadeIn} 1.2s ease-in;
+  font-weight: 600;
+  @media (min-width: ${variables.desktop}) {
+    font-size: 7.5rem;
+    font-weight: 600;
+  }
+`;
+
 export const ContactTextWrapper = styled.div(
   ({ style }) => css`
     width: 90%;
-    margin-top: ${style.marginTop};
+    margin-top: 12rem;
+    @media (min-width: ${variables.desktop}) {
+      font-size: 5rem;
+      font-weight: 400;
+    }
   `
 );
 export const ContactText = styled.span`
@@ -41,20 +69,35 @@ export const ContactText = styled.span`
   font-family: ${variables.poppins};
   animation: ${variables.fadeIn} 1.2s ease-in;
   font-weight: 600;
+  @media (min-width: ${variables.desktop}) {
+    font-size: 5rem;
+    font-weight: 400;
+  }
 `;
 
 // contact form
+export const ContactFormContainer = styled.div`
+  @media (min-width: ${variables.desktop}) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
 export const ContactFormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-top: 0.5rem;
   animation: ${variables.fadeIn} 1.2s ease-in;
+  @media (min-width: ${variables.desktop}) {
+    width: 40%;
+  }
 `;
 export const ContactFormInputName = styled.input(
   ({ style }) => css`
     height: 3rem;
-    margin-top: 1.5rem;
+    margin-top: 3.5rem;
     background-color: transparent;
     border: none;
     border-bottom: 0.2rem solid ${variables.whitePrimaryColor};
@@ -130,6 +173,9 @@ export const ContactFormTextArea = styled.textarea`
 export const ContactButtonWrapper = styled.div`
   margin-top: 2rem;
   padding-bottom: 3rem;
+  @media (min-width: ${variables.desktop}) {
+    width: 40%;
+  }
 `;
 export const ContactButton = styled.div`
   cursor: pointer;
@@ -144,6 +190,12 @@ export const ContactButton = styled.div`
   justify-content: center;
   font-family: ${variables.poppins};
   animation: ${variables.fadeIn} 1.2s ease-in;
+  @media (min-width: ${variables.desktop}) {
+    &:hover {
+      background-color: #cc8808d5;
+      transition-duration: 500ms;
+    }
+  }
 `;
 
 // contact information
@@ -151,11 +203,25 @@ export const ContactInfoContainer = styled.div`
   margin-top: 3rem;
   animation: ${variables.fadeIn} 1.2s ease-in;
   padding-bottom: 6rem;
+  @media (min-width: ${variables.desktop}) {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+  }
+`;
+export const ContactInfoTextWrapper = styled.div`
+  @media (min-width: ${variables.desktop}) {
+    width: 100%;
+    width: 20%;
+  }
 `;
 export const ContactInfoWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  @media (min-width: ${variables.desktop}) {
+    width: 100%;
+  }
 `;
 export const ContactInfoTitle = styled.span(
   ({ style }) => css`
@@ -164,6 +230,9 @@ export const ContactInfoTitle = styled.span(
     margin-right: ${style.element.marginRight};
     color: ${variables.whitePrimaryColor};
     letter-spacing: 0.1rem;
+    @media (min-width: ${variables.desktop}) {
+      font-weight: 600;
+    }
   `
 );
 export const ContactInfoLink = styled.a`

@@ -15,7 +15,6 @@ export const MenuLayoutContainer = styled.div(
     top: 0;
     display: flex;
     padding: 14rem 2rem 2rem 2rem;
-
     flex-direction: column;
     z-index: ${style.value ? "1" : "-1"};
     opacity: ${style.value ? "1" : "0"};
@@ -33,7 +32,7 @@ export const MenuLayoutWrapper = styled.div`
   width: 100%;
   @media (min-width: ${variables.desktop}) {
     width: 50%;
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
   }
 `;
 export const MenuLayoutLine = styled.div(
@@ -50,11 +49,10 @@ export const MenuLayoutTextWrapper = styled.div`
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
   margin-left: 1rem;
 `;
 export const MenuLayoutTextLineWrapper = styled.div`
-  background-color: red;
   width: 40rem;
   position: relative;
   display: flex;
@@ -75,8 +73,8 @@ export const MenuLayoutTextLine = styled.div(
     left: -2%;
     transition: width ${style.value ? "0.4s" : "0s"} ease-in-out;
     @media (min-width: ${variables.desktop}) {
-      height: ${style.value ? "0.2rem" : "0.20rem"};
-      width: ${style.value ? "116%" : "10%"};
+      height: ${style.value ? "0.2rem" : "0rem"};
+      width: ${style.value ? "116%" : "0%"};
     }
   `
 );
@@ -84,14 +82,14 @@ export const MenuLayoutTextLine = styled.div(
 export const MenuLayoutText = styled.span(
   ({ style }) => css`
     transform: scale(5);
-    padding-left: 20rem;
-    /* font-size: ${style.value ? "4rem" : "3rem"};
-    transition: font-size 0.1s ease-in-out; */
+    font-size: ${style.value ? "4rem" : "3rem"};
+    transition: font-size 0.1s ease-in-out;
     color: ${variables.blackPrimaryColor};
     cursor: pointer;
-    /* font-weight: ${style.value ? variables.regular : 500}; */
+    font-weight: ${style.value ? variables.regular : 500};
     font-family: ${variables.poppins};
     @media (min-width: ${variables.desktop}) {
+      font-size: ${style.value ? "6rem" : "4rem"};
     }
   `
 );
