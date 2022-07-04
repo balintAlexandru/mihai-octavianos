@@ -7,6 +7,7 @@ import Archive from "./view/Archive/Archive";
 import Contact from "./view/Contact/Contact";
 import Layout from "./view/Layout/Layout";
 import ProjectPage from "./view/ProjectPage/ProjectPage";
+import PROJECTS from "./constants/projects";
 
 // REDUX
 import { useDispatch } from "react-redux";
@@ -30,9 +31,10 @@ function App() {
     getProjects();
     // eslint-disable-next-line
   }, []);
-
+  console.log(PROJECTS[0].intro_image);
   return (
     <BrowserRouter>
+      <img src={PROJECTS[0].intro_image} />
       <Routes>
         <Route path="/" element={<IntroPage />} />
         <Route
