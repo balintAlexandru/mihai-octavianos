@@ -6,6 +6,12 @@ export const ProjectsContainer = styled.div(
   ({ style }) => css`
     ${console.log(style)}
     margin-top: 9rem;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
     ${ceva.ProjectModelImage} {
       filter: blur(0px);
     }
@@ -19,3 +25,19 @@ export const ProjectsContainer = styled.div(
     }
   `
 );
+export const ProjectWrapper = styled.div`
+  display: flex;
+  background-color: red;
+  @media (min-width: ${variables.desktop}) {
+    width: 80%;
+    height: 100%;
+  }
+`;
+export const ProjectWrapperLeft = styled.div`
+  background-color: blue;
+  display: flex;
+
+  @media (min-width: ${variables.desktop}) {
+  }
+`;
+export const ProjectWrapperRight = styled.div``;

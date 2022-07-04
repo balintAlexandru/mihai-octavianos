@@ -19,15 +19,6 @@ const ProjectModel = (props) => {
   const [value, setValue] = useState(0);
   const [styleProps, setStyleProps] = useState(true);
 
-  // useEffect(() => {
-  //   setValue(blurImage);
-  //   if (value === id) {
-  //     setStyleProps(true);
-  //   }
-  // }, [blurImage]);
-  // const test = (id) => {
-  //   dispatch(isBlur(id));
-  // };
   const handleScroll = useCallback(() => {
     layout(false);
   }, [layout]);

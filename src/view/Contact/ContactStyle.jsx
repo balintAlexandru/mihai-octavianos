@@ -35,8 +35,6 @@ export const ContactIntroTextWrapper = styled.div(
   ({ style }) => css`
     width: 90%;
     margin-top: 2rem;
-    @media (min-width: ${variables.desktop}) {
-    }
   `
 );
 export const ContactIntroText = styled.span`
