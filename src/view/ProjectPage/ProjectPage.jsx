@@ -32,11 +32,24 @@ const ProjectPage = () => {
         <Styled.ProjectPageHeroImage src={PROJECTS[id]?.content.hero_image} />
       </Styled.ProjectPageHeroWrapper>
       <Styled.ProjectPageHeroInfoContainer>
-        <Styled.ProjectPageHeroInfoNameWrapper>
-          <Styled.ProjectPageHeroInfoName>
-            {PROJECTS[id]?.name}
-          </Styled.ProjectPageHeroInfoName>
-        </Styled.ProjectPageHeroInfoNameWrapper>
+        <Styled.ProjectPageHeroInfoWrapper>
+          <Styled.ProjectPageHeroInfoNameWrapper>
+            <Styled.ProjectPageHeroInfoName>
+              {PROJECTS[id]?.name}
+            </Styled.ProjectPageHeroInfoName>
+          </Styled.ProjectPageHeroInfoNameWrapper>
+          <Styled.ProjectPageHeroInfoTextWrapper>
+            <Styled.ProjectPageHeroInfoText>
+              {PROJECTS[id]?.intro_text}
+            </Styled.ProjectPageHeroInfoText>
+          </Styled.ProjectPageHeroInfoTextWrapper>
+
+          <Styled.ProjectPageHeroScrollTextWrapper>
+            <Styled.ProjectPageHeroScrollText>
+              Scroll down
+            </Styled.ProjectPageHeroScrollText>
+          </Styled.ProjectPageHeroScrollTextWrapper>
+        </Styled.ProjectPageHeroInfoWrapper>
       </Styled.ProjectPageHeroInfoContainer>
       {/* <Styled.ProjectPageHeroName>
         {PROJECTS[id]?.name}
