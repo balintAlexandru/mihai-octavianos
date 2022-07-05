@@ -11,6 +11,7 @@ export const ProjectModelWrapper = styled.div`
 
   @media (min-width: ${variables.desktop}) {
     width: 100%;
+    height: 100%;
   }
 `;
 export const ProjectModelImageWrapper = styled.div`
@@ -21,5 +22,6 @@ export const ProjectModelImage = styled.img(
   ({ style }) => css`
     width: 100%;
     height: 100%;
+    cursor: pointer;
   `
 );

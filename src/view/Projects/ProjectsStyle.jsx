@@ -5,13 +5,12 @@ import * as ceva from "../../components/ProjectModel/ProjectsModelStyle";
 export const ProjectsContainer = styled.div(
   ({ style }) => css`
     ${console.log(style)}
-    margin-top: 9rem;
-    width: 100vw;
+    margin-top: 19rem;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: yellow;
     ${ceva.ProjectModelImage} {
       filter: blur(0px);
     }
@@ -26,18 +25,25 @@ export const ProjectsContainer = styled.div(
   `
 );
 export const ProjectWrapper = styled.div`
-  display: flex;
-  background-color: red;
   @media (min-width: ${variables.desktop}) {
-    width: 80%;
+    width: 60%;
     height: 100%;
+    display: flex;
   }
 `;
 export const ProjectWrapperLeft = styled.div`
-  background-color: blue;
   display: flex;
-
+  flex-direction: column;
   @media (min-width: ${variables.desktop}) {
+    width: 50%;
+    height: 100%;
   }
 `;
-export const ProjectWrapperRight = styled.div``;
+export const ProjectWrapperRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: ${variables.desktop}) {
+    width: 50%;
+    height: 100%;
+  }
+`;

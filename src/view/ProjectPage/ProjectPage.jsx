@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+
 // CONSTANTS
 import {
   changeBackgroundColor,
   enableScroll,
 } from "../../helpers/globalFunctions";
+import PROJECTS from "../../constants/projects";
 
 // STYLE
 import * as variables from "../../utils/Styles/variables";
@@ -25,12 +27,12 @@ const ProjectPage = () => {
 
   console.log(PROJECTS_DATA[id]);
   return (
-    <Styled.ProjectPageHeroContainer style={PROJECTS_DATA[id]}>
+    <Styled.ProjectPageHeroContainer>
       <Styled.ProjectPageHeroName>
-        {PROJECTS_DATA[id]?.NAME}
+        {PROJECTS[id]?.name}
       </Styled.ProjectPageHeroName>
       <Styled.ProjectPageHeroInfo>
-        {PROJECTS_DATA[id]?.INFO}
+        {PROJECTS[id]?.intro_text}
       </Styled.ProjectPageHeroInfo>
     </Styled.ProjectPageHeroContainer>
     // <>

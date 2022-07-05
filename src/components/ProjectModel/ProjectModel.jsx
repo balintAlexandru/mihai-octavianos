@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 
 //STYLE
 import * as Styled from "./ProjectsModelStyle";
@@ -15,6 +16,7 @@ const ProjectModel = (props) => {
   const { image = "", id = 0, layout = () => {} } = props;
   const dispatch = useDispatch();
   // CONSTANTS USING LIBRARIES
+  const navigate = useNavigate();
   const blurImage = useSelector((state) => state.projectsData.blur);
   const [value, setValue] = useState(0);
   const [styleProps, setStyleProps] = useState(true);
@@ -36,6 +38,7 @@ const ProjectModel = (props) => {
             style={{ styleProps }}
             // onMouseLeave={() => layout(true)}
             onMouseEnter={() => layout(true)}
+            onClick={() => navigate(`/project-${id}`)}
           />
         </Styled.ProjectModelImageWrapper>
       </Styled.ProjectModelWrapper>
