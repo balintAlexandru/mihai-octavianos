@@ -27,19 +27,24 @@ const ProjectPage = () => {
 
   console.log(PROJECTS_DATA[id]);
   return (
-    <Styled.ProjectPageHeroContainer>
-      <Styled.ProjectPageHeroName>
+    <Styled.ProjectPageContainer>
+      <Styled.ProjectPageHeroWrapper>
+        <Styled.ProjectPageHeroImage src={PROJECTS[id]?.content.hero_image} />
+      </Styled.ProjectPageHeroWrapper>
+      <Styled.ProjectPageHeroInfoContainer>
+        <Styled.ProjectPageHeroInfoNameWrapper>
+          <Styled.ProjectPageHeroInfoName>
+            {PROJECTS[id]?.name}
+          </Styled.ProjectPageHeroInfoName>
+        </Styled.ProjectPageHeroInfoNameWrapper>
+      </Styled.ProjectPageHeroInfoContainer>
+      {/* <Styled.ProjectPageHeroName>
         {PROJECTS[id]?.name}
       </Styled.ProjectPageHeroName>
       <Styled.ProjectPageHeroInfo>
         {PROJECTS[id]?.intro_text}
-      </Styled.ProjectPageHeroInfo>
-    </Styled.ProjectPageHeroContainer>
-    // <>
-    //   {PROJECTS_DATA[id]?.IMAGE_CONTENT?.map((element) => (
-    //     <img src={element.IMAGE} />
-    //   ))}
-    // </>
+      </Styled.ProjectPageHeroInfo>*/}
+    </Styled.ProjectPageContainer>
   );
 };
 
