@@ -109,3 +109,21 @@ export const ProjectPageHeroInfo = styled.span`
   color: white;
   font-family: "Belleza", sans-serif;
 `;
+
+export const ProjectPageButtonWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+export const ProjectPageImagesWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+export const ProjectPageImagesLeft = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+export const ProjectPageImageRight = styled.div`
+  width: 100%;
+  height: 100%;
+`;

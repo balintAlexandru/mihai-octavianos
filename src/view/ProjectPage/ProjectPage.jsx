@@ -31,6 +31,7 @@ const ProjectPage = () => {
       <Styled.ProjectPageHeroWrapper>
         <Styled.ProjectPageHeroImage src={PROJECTS[id]?.content.hero_image} />
       </Styled.ProjectPageHeroWrapper>
+
       <Styled.ProjectPageHeroInfoContainer>
         <Styled.ProjectPageHeroInfoWrapper>
           <Styled.ProjectPageHeroInfoNameWrapper>
@@ -43,7 +44,6 @@ const ProjectPage = () => {
               {PROJECTS[id]?.intro_text}
             </Styled.ProjectPageHeroInfoText>
           </Styled.ProjectPageHeroInfoTextWrapper>
-
           <Styled.ProjectPageHeroScrollTextWrapper>
             <Styled.ProjectPageHeroScrollText>
               Scroll down
@@ -51,12 +51,19 @@ const ProjectPage = () => {
           </Styled.ProjectPageHeroScrollTextWrapper>
         </Styled.ProjectPageHeroInfoWrapper>
       </Styled.ProjectPageHeroInfoContainer>
-      {/* <Styled.ProjectPageHeroName>
-        {PROJECTS[id]?.name}
-      </Styled.ProjectPageHeroName>
-      <Styled.ProjectPageHeroInfo>
-        {PROJECTS[id]?.intro_text}
-      </Styled.ProjectPageHeroInfo>*/}
+
+      <Styled.ProjectPageButtonWrapper>
+
+      </Styled.ProjectPageButtonWrapper>
+      
+      <Styled.ProjectPageImagesWrapper>
+        <Styled.ProjectPageImagesLeft>
+
+        </Styled.ProjectPageImagesLeft>
+        <Styled.ProjectPageImageRight>
+
+        </Styled.ProjectPageImageRight>
+      </Styled.ProjectPageImagesWrapper>
     </Styled.ProjectPageContainer>
   );
 };
