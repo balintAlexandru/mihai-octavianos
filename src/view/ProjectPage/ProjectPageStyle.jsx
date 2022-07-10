@@ -135,7 +135,7 @@ export const ProjectPageButtonIcon = styled(KeyboardBackspaceIcon)`
     font-size: 2.5rem;
     color: ${variables.whitePrimaryColor};
     @media (min-width: ${variables.desktop}) {
-      font-size: 4rem;
+      font-size: 3rem;
     }
   }
 `;
@@ -144,6 +144,7 @@ export const ProjectPageButtonText = styled.span`
   color: ${variables.whitePrimaryColor};
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
+  font-style: italic;
   @media (min-width: ${variables.desktop}) {
     font-size: 2rem;
   }
@@ -217,7 +218,7 @@ export const ProjectPageNextPageImageWrapper = styled.div`
   @media (min-width: ${variables.desktop}) {
     width: 100vw;
     height: 100vh;
-    padding: 4rem;
+    padding: 2rem;
   }
 `;
 export const ProjectPageNextPageImage = styled.img`
