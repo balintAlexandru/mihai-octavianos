@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
 // CONSTANTS
 import {
   changeBackgroundColor,
@@ -15,12 +14,9 @@ import * as Styled from "./ProjectsStyle";
 // COMPONENTS
 import ProjectModel from "../../components/ProjectModel/ProjectModel";
 
-// REDUX
-import { useSelector } from "react-redux";
-
 const Projects = () => {
   // CONSTANTS
-  
+
   // CONSTANTS USING HOOKS
   const [projectLayoutStyle, setProjectLayoutStyle] = useState(0);
   // HANDLE FUNCTIONS
@@ -41,7 +37,7 @@ const Projects = () => {
                   key={index}
                   id={index}
                   image={data?.intro_image}
-                  layout={setProjectLayoutStyle}
+                  styleType="projects"
                 />
               )
           )}
@@ -55,7 +51,7 @@ const Projects = () => {
                   key={index}
                   id={index}
                   image={data?.intro_image}
-                  layout={setProjectLayoutStyle}
+                  styleType="projects"
                 />
               )
           )}

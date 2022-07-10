@@ -7,38 +7,25 @@ import * as Styled from "./ProjectsModelStyle";
 // LIBRARIES
 import PropTypes from "prop-types";
 
-// REDUX
-import { useSelector, useDispatch } from "react-redux";
-import { isBlur } from "../../slices/projectsData";
-
 const ProjectModel = (props) => {
   // PROPS
-  const { image = "", id = 0, layout = () => {} } = props;
-  const dispatch = useDispatch();
+  const { image = "", id = 0, styleType = "" } = props;
   // CONSTANTS USING LIBRARIES
   const navigate = useNavigate();
-  const blurImage = useSelector((state) => state.projectsData.blur);
-  const [value, setValue] = useState(0);
-  const [styleProps, setStyleProps] = useState(true);
 
-  const handleScroll = useCallback(() => {
-    layout(false);
-  }, [layout]);
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, [handleScroll]);
-
+  const handleClick = (style) => {
+    if (style === "projects") {
+      navigate(`/project-${id}`);
+    }
+  };
   return (
     <>
-      <Styled.ProjectModelWrapper>
+      <Styled.ProjectModelWrapper style={{ styleType }}>
         <Styled.ProjectModelImageWrapper>
           <Styled.ProjectModelImage
             src={image}
             alt={"project-image"}
-            style={{ styleProps }}
-            // onMouseLeave={() => layout(true)}
-            onMouseEnter={() => layout(true)}
-            onClick={() => navigate(`/project-${id}`)}
+            onClick={() => handleClick(styleType)}
           />
         </Styled.ProjectModelImageWrapper>
       </Styled.ProjectModelWrapper>
@@ -49,6 +36,7 @@ const ProjectModel = (props) => {
 ProjectModel.propTypes = {
   image: PropTypes.string,
   id: PropTypes.number,
+  styleType: PropTypes.string,
 };
 
 export default ProjectModel;

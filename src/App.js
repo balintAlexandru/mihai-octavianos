@@ -62,7 +62,7 @@ function App() {
             </>
           }
         />
-        {/* <Route
+        <Route
           path="archive"
           element={
             <>
@@ -70,7 +70,7 @@ function App() {
               <Layout />
             </>
           }
-        /> */}
+        />
         <Route
           path="contact"
           element={

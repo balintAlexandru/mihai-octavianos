@@ -11,7 +11,7 @@ export const ProjectsContainer = styled.div(
     display: flex;
     align-items: center;
     justify-content: center;
-    ${ceva.ProjectModelImage} {
+    /* ${ceva.ProjectModelImage} {
       filter: blur(0px);
     }
     &:hover {
@@ -20,7 +20,7 @@ export const ProjectsContainer = styled.div(
         &:hover {
           filter: blur(0px);
         }
-      }
+      } */
     }
   `
 );

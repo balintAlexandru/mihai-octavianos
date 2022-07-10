@@ -15,8 +15,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_1_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 1,
   },
   {
     name: "Project 2",
@@ -31,8 +31,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_2_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 2,
   },
   {
     name: "Project 3",
@@ -47,8 +47,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_3_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 3,
   },
   {
     name: "Project 4",
@@ -63,8 +63,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_4_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 4,
   },
   {
     name: "Project 5",
@@ -79,8 +79,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_5_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 5,
   },
   {
     name: "Project 6",
@@ -95,8 +95,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_6_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 6,
   },
   {
     name: "Project 7",
@@ -111,8 +111,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_7_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 7,
   },
   {
     name: "Project 8",
@@ -127,8 +127,8 @@ const PROJECTS = [
         variables.INTRO_PROJECT_8_CONTENT_IMAGE_4,
       ],
     },
-    next_project_image: "",
-    next_project_id: 0,
+    next_project_image: variables.INTRO_PROJECT_2_CONTENT_HERO,
+    next_project_id: 8,
   },
 ];
 export default PROJECTS;
