@@ -22,10 +22,24 @@ const AboutMe = () => {
         <Styled.AboutMeLine />
       </Styled.AboutMeLineWrapper>
       <Styled.AboutMeIntroTextWrapper>
-        <Styled.AboutMeIntroText>
-          ABOUT MIHAI
-        </Styled.AboutMeIntroText>
+        <Styled.AboutMeIntroText>ABOUT MIHAI</Styled.AboutMeIntroText>
       </Styled.AboutMeIntroTextWrapper>
+      <Styled.AboutMeVideoWrapper>
+        <Styled.AboutMeVideo />
+      </Styled.AboutMeVideoWrapper>
+      <Styled.AboutMeAboutWrapper>
+        <Styled.AboutMeBioWrapper>
+          <Styled.AboutMeBio>B I O</Styled.AboutMeBio>
+        </Styled.AboutMeBioWrapper>
+        <Styled.AboutMeTextWrapper>
+          <Styled.AboutMeText>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            nostrum quasi architecto dolores beatae minus quisquam delectus
+            earum quam commodi neque, officia necessitatibus quibusdam molestiae
+            tempora, molestias illum praesentium unde.
+          </Styled.AboutMeText>
+        </Styled.AboutMeTextWrapper>
+      </Styled.AboutMeAboutWrapper>
     </Styled.AboutMeContainer>
   );
 };
