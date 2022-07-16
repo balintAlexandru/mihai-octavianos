@@ -1,5 +1,6 @@
 // LIBRARIES
 import styled, { css } from "styled-components";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 // CONSTANTS
 import * as variables from "../../utils/Styles/variables";
@@ -27,6 +28,7 @@ export const AboutMeLine = styled.div`
 `;
 
 export const AboutMeIntroTextWrapper = styled.div`
+  padding-top: 3rem;
   @media (min-width: ${variables.desktop}) {
     width: 40%;
     padding-top: 4rem;
@@ -64,6 +66,29 @@ export const AboutMeVideo = styled.div`
 `;
 
 // about
+export const AboutMeAboutLineWrapper = styled.div`
+  width: 100%;
+  padding-top: 11rem;
+  @media (min-width: ${variables.desktop}) {
+    padding-top: 28rem;
+  }
+`;
+export const AboutMeAboutLine = styled.span`
+  width: 80%;
+  border-top: 0.1rem solid ${variables.whitePrimaryColor};
+  padding-top: 0.6rem;
+  font-size: 1.4rem;
+  color: ${variables.whitePrimaryColor};
+  opacity: 80%;
+  letter-spacing: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  float: right;
+  @media (min-width: ${variables.desktop}) {
+    font-size: 2.4rem;
+    padding-top: 0.8rem;
+  }
+`;
 export const AboutMeAboutWrapper = styled.div`
   width: 100%;
   padding-top: 3rem;
@@ -98,11 +123,11 @@ export const AboutMeTextWrapper = styled.div`
   padding-top: 2.5rem;
 `;
 export const AboutMeText = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   color: ${variables.whitePrimaryColor};
   line-height: 2.8rem;
-  font-weight: 600;
+  font-weight: 500;
   opacity: 90%;
   letter-spacing: 0.05rem;
   @media (min-width: ${variables.desktop}) {
@@ -114,8 +139,139 @@ export const AboutMeText = styled.p`
 `;
 
 // name1
-export const AboutMeName1Wrapper = styled.div``;
-export const AboutMeName1TextWrapper = styled.div``;
-export const AboutMeName1Text = styled.p``;
-export const AboutMeName1ImageWrapper = styled.div``;
-export const AboutMeName1Image = styled.img``;
+export const AboutMeName1Wrapper = styled.div`
+  padding-top: 4.5rem;
+  @media (min-width: ${variables.desktop}) {
+    display: flex;
+    width: 100%;
+    padding-top: 10rem;
+  }
+`;
+export const AboutMeName1TextWrapper = styled.div`
+  padding-top: 2rem;
+  @media (min-width: ${variables.desktop}) {
+    width: 80%;
+  }
+`;
+export const AboutMeName1Text = styled.p`
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  font-family: "Belleza", sans-serif;
+  color: ${variables.whitePrimaryColor};
+  @media (min-width: ${variables.desktop}) {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+`;
+export const AboutMeName1ImageWrapper = styled.div`
+  padding-top: 3rem;
+  padding-bottom: 0.7rem;
+  @media (min-width: ${variables.desktop}) {
+    padding-left: 3rem;
+  }
+`;
+export const AboutMeName1Image = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+export const AboutMeName1Info = styled.span`
+  font-size: 1.4rem;
+  color: ${variables.whitePrimaryColor};
+  opacity: 80%;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.1rem;
+  @media (min-width: ${variables.desktop}) {
+    align-self: flex-end;
+    position: absolute;
+  }
+`;
+
+// name2
+export const AboutMeName2Wrapper = styled.div`
+  padding-top: 4.5rem;
+  @media (min-width: ${variables.desktop}) {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-top: 20rem;
+  }
+`;
+export const AboutMeName2TextWrapper = styled.div`
+  padding-top: 2rem;
+  @media (min-width: ${variables.desktop}) {
+    width: 80%;
+  }
+`;
+export const AboutMeName2Text = styled.p`
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  font-family: "Belleza", sans-serif;
+  color: ${variables.whitePrimaryColor};
+  @media (min-width: ${variables.desktop}) {
+    font-size: 6rem;
+    line-height: 5rem;
+  }
+`;
+export const AboutMeName2ImageWrapper = styled.div`
+  padding-top: 3rem;
+  padding-bottom: 0.7rem;
+  @media (min-width: ${variables.desktop}) {
+    padding-right: 3rem;
+  }
+`;
+export const AboutMeName2Image = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+export const AboutMeName2Info = styled.span`
+  font-size: 1.4rem;
+  color: ${variables.whitePrimaryColor};
+  opacity: 80%;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.1rem;
+  @media (min-width: ${variables.desktop}) {
+    align-self: flex-end;
+    left: 56%;
+    position: absolute;
+  }
+`;
+
+// Archive button
+export const AboutMeArchiveButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding-top: 3rem;
+`;
+export const AboutMeArchiveButton = styled.span`
+  color: ${variables.whitePrimaryColor};
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+`;
+export const AboutMeArchiveButtonIcon = styled(ArrowRightAltIcon)`
+  &.MuiSvgIcon-root {
+    font-size: 3rem;
+    margin-left: 1rem;
+    color: ${variables.whitePrimaryColor};
+  }
+`;
+
+//behind the scene
+export const AboutMeBehindSceneLineWrapper = styled.div`
+  width: 85%;
+  margin-top: 5rem;
+  border-top: 0.1rem solid ${variables.whitePrimaryColor};
+  padding-top: 0.5rem;
+`;
+export const AboutMeBefindSceneLine = styled.span`
+  font-size: 1.4rem;
+  color: ${variables.whitePrimaryColor};
+  opacity: 80%;
+  letter-spacing: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  @media (min-width: ${variables.desktop}) {
+    font-size: 2.4rem;
+    padding-top: 0.8rem;
+  }
+`;
