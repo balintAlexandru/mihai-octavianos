@@ -40,6 +40,19 @@ const AboutMe = () => {
           </Styled.AboutMeText>
         </Styled.AboutMeTextWrapper>
       </Styled.AboutMeAboutWrapper>
+      <Styled.AboutMeName1Wrapper>
+        <Styled.AboutMeName1TextWrapper>
+          <Styled.AboutMeName1Text>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+            itaque, nulla ipsam dicta officiis rem earum! Exercitationem
+            nostrum, doloremque iure debitis dignissimos, velit fugiat optio
+            fugit vitae enim beatae eveniet.
+          </Styled.AboutMeName1Text>
+        </Styled.AboutMeName1TextWrapper>
+        <Styled.AboutMeName1ImageWrapper>
+          <Styled.AboutMeName1Image src="" alt="name1"/>
+        </Styled.AboutMeName1ImageWrapper>
+      </Styled.AboutMeName1Wrapper>
     </Styled.AboutMeContainer>
   );
 };
