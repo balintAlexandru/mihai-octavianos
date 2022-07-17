@@ -1,0 +1,30 @@
+.carousel {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 5.5rem;
+}
+
+.carousel-control-prev {
+  height: 300px;
+}
+.carousel-control-next {
+  height: 300px;
+}
+.carousel-indicators {
+  visibility: hidden;
+}
+.carousel .carousel-control-prev-icon {
+  visibility: hidden;
+}
+.carousel:hover .carousel-control-prev-icon {
+  visibility: visible;
+}
+
+.carousel .carousel-control-next-icon {
+  visibility: hidden;
+}
+.carousel:hover .carousel-control-next-icon {
+  visibility: visible;
+}

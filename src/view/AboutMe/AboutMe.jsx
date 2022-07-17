@@ -12,6 +12,7 @@ import * as variables from "../../utils/Styles/variables";
 import * as Styled from "./AboutMeStyle";
 import Name1 from "../../images/AboutMe/Name1/Name1.jpg";
 import { Style } from "@mui/icons-material";
+import VideoCarousel from "../../components/VideoCarousel/VideoCarousel";
 
 const AboutMe = () => {
   //HANDLE FUNCTIONS
@@ -100,6 +101,38 @@ const AboutMe = () => {
           BEHIND THE SCENES
         </Styled.AboutMeBefindSceneLine>
       </Styled.AboutMeBehindSceneLineWrapper>
+      {/* TODO: CREATE CAROUSEL COMPONENT */}
+      {/* <VideoCarousel /> */}
+
+      <Styled.AboutMeFooterLine />
+      <Styled.AboutMeFooterTextWrapper>
+        <Styled.AboutMeFooterText>FOLLOW</Styled.AboutMeFooterText>
+      </Styled.AboutMeFooterTextWrapper>
+      <Styled.AboutMeInstagramWrapper>
+        <Styled.AboutMeInstagram
+          href="https://www.instagram.com/mihaioctavianos/"
+          target="_blank"
+        >
+          @mihaioctavianos
+        </Styled.AboutMeInstagram>
+      </Styled.AboutMeInstagramWrapper>
+      <Styled.AboutMeFooterLine />
+      <Styled.AboutMeLinksWrapper>
+        <Styled.AboutMeProjectTextWrapper
+          onClick={() => {
+            navigate("/projects");
+          }}
+        >
+          <Styled.AboutMeProjectText>Projects</Styled.AboutMeProjectText>
+        </Styled.AboutMeProjectTextWrapper>
+        <Styled.AboutMeContactTextWrapper
+          onClick={() => {
+            navigate("/contact");
+          }}
+        >
+          <Styled.AboutMeContactText>Contact</Styled.AboutMeContactText>
+        </Styled.AboutMeContactTextWrapper>
+      </Styled.AboutMeLinksWrapper>
     </Styled.AboutMeContainer>
   );
 };

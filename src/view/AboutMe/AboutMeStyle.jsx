@@ -262,6 +262,7 @@ export const AboutMeBehindSceneLineWrapper = styled.div`
   margin-top: 5rem;
   border-top: 0.1rem solid ${variables.whitePrimaryColor};
   padding-top: 0.5rem;
+  margin-bottom: 8rem;
 `;
 export const AboutMeBefindSceneLine = styled.span`
   font-size: 1.4rem;
@@ -273,5 +274,80 @@ export const AboutMeBefindSceneLine = styled.span`
   @media (min-width: ${variables.desktop}) {
     font-size: 2.4rem;
     padding-top: 0.8rem;
+  }
+`;
+
+// about me instgram
+export const AboutMeFooterLine = styled.div`
+  width: 100%;
+  height: 0.1rem;
+  background-color: ${variables.whitePrimaryColor};
+  opacity: 70%;
+`;
+export const AboutMeFooterTextWrapper = styled.div`
+  width: 100%;
+  padding-top: 2rem;
+`;
+export const AboutMeFooterText = styled.span`
+  font-size: 1.4rem;
+  color: ${variables.whitePrimaryColor};
+  opacity: 80%;
+  letter-spacing: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  @media (min-width: ${variables.desktop}) {
+    font-size: 2.4rem;
+  }
+`;
+export const AboutMeInstagramWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+export const AboutMeInstagram = styled.a`
+  font-size: 4.4rem;
+  font-weight: 800;
+  font-family: "Belleza", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: ${variables.whitePrimaryColor};
+  padding: 1rem 0 3rem 0;
+  &:hover {
+    color: ${variables.whitePrimaryColor};
+  }
+  @media (min-width: ${variables.desktop}) {
+    font-size: 14rem;
+  }
+`;
+
+// text footer
+export const AboutMeLinksWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+`;
+export const AboutMeProjectTextWrapper = styled.div`
+  padding-right: 0.5rem;
+  cursor: pointer;
+`;
+export const AboutMeProjectText = styled.span`
+  font-size: 1.4rem;
+  color: ${variables.whitePrimaryColor};
+  @media (min-width: ${variables.desktop}) {
+    font-size: 2rem;
+  }
+`;
+export const AboutMeContactTextWrapper = styled.div`
+  padding-left: 0.5rem;
+  cursor: pointer;
+`;
+export const AboutMeContactText = styled.span`
+  color: ${variables.whitePrimaryColor};
+  font-size: 1.4rem;
+  @media (min-width: ${variables.desktop}) {
+    font-size: 2rem;
   }
 `;
