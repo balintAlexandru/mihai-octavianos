@@ -7,6 +7,7 @@ import {
 } from "../../helpers/globalFunctions";
 
 // STYLE
+import * as Styled from "./ArchiveStyle";
 import * as variables from "../../utils/Styles/variables";
 
 const Archive = () => {
@@ -14,7 +15,14 @@ const Archive = () => {
     changeBackgroundColor(variables.whitePrimaryColor);
     enableScroll();
   }, []);
-  return <div>Muie si pe pagina asta Mihai x4</div>;
+  return (
+    <Styled.ArchiveContainer>
+      <Styled.ArchiveImageWrapper>
+        <Styled.ArchiveImage src="" alt="" />
+      </Styled.ArchiveImageWrapper>
+      <Styled.ArchiveTitleWrapper></Styled.ArchiveTitleWrapper>
+    </Styled.ArchiveContainer>
+  );
 };
 
 export default Archive;
