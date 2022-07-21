@@ -54,6 +54,8 @@ import intro_project_8_content_image_2 from "../images/Project 8/prezentare/imag
 import intro_project_8_content_image_3 from "../images/Project 8/prezentare/image3.webp";
 import intro_project_8_content_image_4 from "../images/Project 8/prezentare/image4.webp";
 
+import JLO from "../images/Archive/JLO.jpg";
+
 export const INTRO_PROJECT_1 = intro_project_1;
 export const INTRO_PROJECT_1_CONTENT_HERO = intro_project_1_content_hero;
 export const INTRO_PROJECT_1_CONTENT_IMAGE_1 = intro_project_1_content_image_1;
@@ -109,3 +111,5 @@ export const INTRO_PROJECT_8_CONTENT_IMAGE_1 = intro_project_8_content_image_1;
 export const INTRO_PROJECT_8_CONTENT_IMAGE_2 = intro_project_8_content_image_2;
 export const INTRO_PROJECT_8_CONTENT_IMAGE_3 = intro_project_8_content_image_3;
 export const INTRO_PROJECT_8_CONTENT_IMAGE_4 = intro_project_8_content_image_4;
+
+export const ARCHIVE_IMAGE = JLO;
